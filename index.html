@@ -1,10 +1,98 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Videos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
- <h1> this is test !!</h1>
- <p>  hi everyone, this <strong> site </strong> is just a test !!<p>
-<p> one more line here.</p>
-<p> one more line added</p>
+  <div class="container">
+    <div class="form-section">
+      <h1 class="main-title">CREATE YOUR OWN VIDEOS! this one</h1>
+      <h2 class="subtitle">IN AN INSTANT</h2>
+
+      <p class="description">
+        Have an event to celebrate? Just send us a photo of it. We'll make a video right away and double your joy!
+      </p>
+      <p class="description">
+        Send us your photos, and we'll add them as part of the example video. We'll send it as an MP4 file to the email
+        id you provided within 30 minutes.
+      </p>
+
+      <!-- Form begins -->
+      <form id="site-generator-form">
+        <div class="form-group">
+          <label for="fileInput">Uploading photo</label>
+          <input type="file" id="fileInput" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email-contact">Provide your contact information</label>
+          <input type="email" id="email-contact" placeholder="your email ID here." required>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea id="comments" placeholder="Please confirm your email id correctly and any other comments"></textarea>
+        </div>
+
+        <div class="form-group advanced-settings-toggle">
+          <button type="button" id="toggle-advanced">
+            <span class="arrow">▾</span> checkout
+          </button>
+        </div>
+
+        <div class="advanced-settings" id="advanced-settings">
+          <div class="form-group">
+            <label for="primary-color">Brand Color</label>
+            <input type="color" id="primary-color" value="#6A4AE8">
+          </div>
+
+          <div class="form-group">
+            <label for="template">Template Style</label>
+            <select id="template">
+              <option value="modern">Modern</option>
+              <option value="classic">Classic</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button" id="uploadButton">CONFIRM & SUBMIT</button>
+      </form>
+      <!-- Form ends -->
+
+      <!-- Thank-you message placed outside the form for visibility -->
+      <div id="thank-you-message" class="thank-you-hidden">
+        🎉 Thank you! Your video is being created.
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <div class="video-preview">
+        <div class="video-container">
+          <div class="video-placeholder">
+            <div class="video-placeholder-text">Video Preview</div>
+          </div>
+          <div class="video-controls">
+            <div class="control-button play-button"></div>
+            <div class="progress-bar">
+              <div class="progress-indicator"></div>
+            </div>
+            <div class="control-button volume-button"></div>
+            <div class="control-button fullscreen-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load JS with type="module" -->
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
